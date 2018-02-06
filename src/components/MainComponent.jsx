@@ -5,12 +5,15 @@ import { bindActionCreators } from 'redux';
 
 import { setEndDate, setStartDate } from '../actions/dateActions';
 import DatePicker from './DatePicker.jsx';
+import PickedTime from './PickedTime';
+import SearchButtons from './SearchButtons';
 
 function mapStateToProps(state) {
 	console.log(state);
 	return {
 		endDate: state.endDate,
-		startDate: state.startDate
+		startDate: state.startDate,
+		dateReducer: state.dateReducer
 	};
 }
   
@@ -22,12 +25,14 @@ function mapDispatchToProps(dispatch) {
 
 class MainContent extends Component {
 	render() {
-		console.log(this.state);
+		const { dateReducer } = this.props;
+
+		console.log(this.props);
 		return(
 			<div className="main-content">
 				<DatePicker />
-				{ this.props.startDate }
-				{ this.props.endDate }
+				<PickedTime startTime={ dateReducer.startDate } endTime={ dateReducer.endDate } />
+				<SearchButtons startTime={ dateReducer.startDate } endTime={ dateReducer.endDate } />
 			</div>
 		);
 	}

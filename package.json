@@ -6,6 +6,7 @@
     "create-react-class": "^15.6.3",
     "moment": "^2.20.1",
     "moment-range": "^3.1.1",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-daterange-picker": "^1.2.0",
     "react-dates": "^16.2.1",
