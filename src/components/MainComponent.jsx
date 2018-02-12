@@ -31,8 +31,8 @@ class MainContent extends Component {
 		return(
 			<div className="main-content">
 				<DatePicker />
-				<PickedTime startTime={ dateReducer.startDate } endTime={ dateReducer.endDate } />
-				<SearchButtons startTime={ dateReducer.startDate } endTime={ dateReducer.endDate } />
+				{ dateReducer.picked && <PickedTime startTime={ dateReducer.startDate } endTime={ dateReducer.endDate } /> }
+				{ dateReducer.picked && <SearchButtons startTime={ dateReducer.startDate } endTime={ dateReducer.endDate } /> }
 			</div>
 		);
 	}

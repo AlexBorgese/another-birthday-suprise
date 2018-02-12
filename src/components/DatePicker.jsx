@@ -33,14 +33,14 @@ const dateRanges = [
 		state: 'enquire',
 		range: moment.range(
 			moment().add(2, 'weeks').subtract(5, 'days'),
-			moment().add(2, 'weeks').add(6, 'days')
+			moment().add(8, 'weeks').add(6, 'days')
 		),
 	},
 	{
 		state: 'unavailable',
 		range: moment.range(
-			moment().add(3, 'weeks'),
-			moment().add(3, 'weeks').add(5, 'days')
+			moment().add(8, 'weeks'),
+			moment().add(8, 'weeks').add(5, 'days')
 		),
 	},
 ];

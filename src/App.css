@@ -8,10 +8,17 @@
 }
 
 .App-header {
-  background-image: url("NIFlag.jpg");
-  background-position: center;
   height: 30%;
   padding: 20px;
+  background: #080705;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.App-image {
+  height: 300px;
+  flex: 2;
 }
 
 .App-header-container {
@@ -19,14 +26,16 @@
 }
 
 .App-subtitle {
-  color: black;
+  flex: 1;
+  color: #912F40;
   font-size: 10px;
   float: right;
 }
 
 .App-title {
+  flex: 1;
   font-size: 1.5em;
-  color: black;
+  color: #912F40;
   float: left;
 }
 

@@ -1,9 +1,9 @@
 import { SET_START_DATE, SET_END_DATE, SET_RANGE } from '../actions/dateActionsConstants';
 
-const initialState = { startDate: '', endDate: '', range: null};
+const initialState = { startDate: '', endDate: '', range: null, picked: false };
 
 export default function dateReducer(state = initialState , action) {
-  let newState = { startDate: '', endDate: '', range: null};
+  let newState = { startDate: '', endDate: '', range: null, picked: false };
   
 	switch (action.type) {
 		case SET_START_DATE:
@@ -19,6 +19,7 @@ export default function dateReducer(state = initialState , action) {
 			newState.range = action.range;
 			newState.endDate = action.range.end._d;
 			newState.startDate = action.range.start._d;
+			newState.picked = true;
 			console.log('range Action')
 			return newState;
 		default:
