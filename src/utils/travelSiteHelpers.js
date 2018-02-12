@@ -36,3 +36,15 @@ export function expediaUrl(startDate, endDate) {
 
     return `https://www.expedia.co.uk/Hotel-Search?packageType=fh&searchProduct=hotel&c=5b920e5a-8241-4b3c-94f7-7e628e01c13c&adults=2&destination=Belfast+(and+vicinity),+Northern+Ireland,+United+Kingdom&ttla=BFS&startDate=${startDay}/${startMonth + 1}/${startYear}&endDate=${endDay}/${endMonth +1}/${endYear}&sort=recommended`;
 }
+
+export function planesUrl(startDate, endDate) {
+    const startYear = startDate.getUTCFullYear().toString().substring(2);
+    const startMonth = startDate.getUTCMonth();
+    const startDay = startDate.getUTCDate();
+
+    const endYear = endDate.getUTCFullYear().toString().substring(2);
+    const endMonth = endDate.getUTCMonth();
+    const endDay = endDate.getUTCDate();
+
+    return `https://www.skyscanner.net/transport/flights/lond/belf/${startYear}0${startMonth+1}${startDay}/${endYear}0${endMonth+1}${endDay}/?adults=2&children=0&adultsv2=2&childrenv2=&infants=0&cabinclass=economy&rtn=1&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false&ref=home#results`;
+}
